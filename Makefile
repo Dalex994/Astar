@@ -9,4 +9,7 @@ compile: astar.c
 run:
 	./bin/$(TARGET)
 
+all:
+	make compile run
+
 
