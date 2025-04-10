@@ -7,7 +7,25 @@
 
 ---
 
+# What ?
+Astar is a Nano and Vim-like TUI text editor based on the [Kilo Editor](https://viewsourcecode.org/snaptoken/kilo/index.html), It is meant to be easily configurable, incredibly light and user-friendly. It'll be available by default on the [Titanium OS]().
 
+## Why ?
+It's fuuuuuun !
+
+# How does it run ?
+For the time, it's only available on Unix terminal, so if you are on Windows, you will need to install [WSL](https://learn.microsoft.com/fr-fr/windows/wsl/install).
+
+Once you have a Unix terminal, just get the latest release, and then run:
+```bash 
+./astar <your_file.xyz> 
+```
+or 
+```bash 
+./astar 
+```
+
+Nice, it's workiin' !!
 
 
 
