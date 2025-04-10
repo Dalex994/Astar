@@ -1,2 +1,2 @@
-*.o
-*.out
+./bin/*.o
+./bin/*.out
