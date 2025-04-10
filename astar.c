@@ -18,6 +18,8 @@
 #include <stdarg.h>
 #include <fcntl.h>
 #include <signal.h>
+
+
 /*** defines ***/
 
 #define ASTAR_VERSION "0.0.4"
