@@ -1,15 +1,28 @@
+CC      := gcc
 
-CFLAGS=-Wall -Wextra -pedantic -std=c99
-TARGET=astar
+CFLAGS  := -Wall -Wextra -pedantic # -std=c99
 
-compile: astar.c
-	$(CC) $(CFLAGS) astar.c -o ./bin/$(TARGET)
+SRCDIR  := src/
 
+SRC     := $(wildcard $(SRCDIR)*.c)
+OBJ     := $(SRC:$(SRCDIR)%.c=$(SRCDIR)%.o)
 
-run:
-	./bin/$(TARGET)
+BIN     := astar
 
-all:
-	make compile run
+build: $(OBJ)
+	$(CC) $(SRC) -o $(BIN) $(CFLAGS)
 
+# $(SRCDIR)%.o: $(SRCDIR)%.c
+# 	$(CC) -c $< -o $@ $(CFLAGS)
 
+clean:
+	rm -rf $(OBJ)
+
+fclean: clean
+	rm -rf $(BIN)
+
+re: fclean all
+
+all: build
+
+.PHONY: all clean fclean re
